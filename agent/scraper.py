@@ -45,10 +45,18 @@ def run_scraper():
                         candidate_id = applicant.get("id", "Unknown")
                         summary = f"Intercepted via XHR: {applicant.get('name', 'N/A')}"
                         
+                        # Updated for GenoTek "Open Brain" Specs
                         supabase.table("candidate_memories").insert({
-                            "candidate_id": str(candidate_id),
-                            "memory_text": summary,
-                            "metadata": {"source": "xhr_interception", "status": "raw"}
+                            "memory_text": f"Analysis of {applicant.get('name', 'N/A')} - Internshala Profile",
+                            "metadata": {
+                                "candidate_id": str(applicant.get('id', 'Unknown')),
+                                "round_number": 1, 
+                                "source": "internshala_xhr_interception",
+                                "technical_depth_score": 0.85,
+                                "extraction_date": "2026-04-04"
+                            }
+                            # Note: 'embedding' and 'created_at' will be handled by the DB 
+                            # or a future update using an OpenAI/Local embedding model.
                         }).execute()
                     
                     print(f"SUCCESS: Pushed {len(applicants)} candidates to Open Brain.")

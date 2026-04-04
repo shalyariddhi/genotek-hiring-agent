@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Candidate Alpha (The Builder)",
+    "github_commits_last_30d": 45,
+    "technical_answer": "I built a Zorvyn-style backend. Faced a 403 error on login, solved it by intercepting XHR headers in Playwright.",
+    "applied_date": "2026-04-03"
+  },
+  {
+    "id": 2,
+    "name": "Candidate Beta (The AI Spammer)",
+    "github_commits_last_30d": 2,
+    "technical_answer": "I am delighted to apply. I have extensive experience in many fields and I am a highly motivated quick learner.",
+    "applied_date": "2026-04-03"
+  }
+]

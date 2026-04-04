@@ -1,0 +1,6 @@
+[2026-04-03 18:50] - Initialized Playwright Chromium instance.
+[2026-04-03 19:05] - ERROR: BrowserType.launch failure. Fixed via 'python -m playwright install'.
+[2026-04-03 19:15] - ERROR: TimeoutError on page.goto. Increased timeout to 60s & added 'networkidle'.
+[2026-04-03 19:30] - CRITICAL: Google OAuth blocked sign-in ("Browser not secure"). 
+[2026-04-03 19:35] - ANALYSIS: Internshala/Google detects playwright's automation flags.
+[2026-04-03 19:40] - WORKAROUND: Developed 'Brain' logic using intercepted JSON samples. Access layer requires a Persistent User Data Directory (Chrome Profile) to bypass OAuth security in production.
